@@ -3,9 +3,10 @@ pipeline {
     docker {
       image 'ranisha/maven-java17-agent'
       args '--user root -v /var/run/docker.sock:/var/run/docker.sock'
-}
-}
+    }
   }
+  // Add stages here
+}
   stages {
     stage('Checkout') {
       steps {
