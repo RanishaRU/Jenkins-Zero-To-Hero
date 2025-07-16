@@ -6,6 +6,13 @@ pipeline {
     }
   }
   stages {
+    stage('Pre-Cleanup') {
+      steps {
+        deleteDir()
+        sh 'df -h'
+      }
+    }
+  stages {
     stage('Checkout') {
       steps {
         sh 'echo passed'
